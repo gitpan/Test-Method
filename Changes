@@ -1,3 +1,6 @@
 Revision history for Test-SubRoutine
+0.001001  2013-03-05
+	- remove unused dependencies
+
 0.001000  2013-03-01
-	-
+	- initial release

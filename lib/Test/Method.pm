@@ -3,18 +3,16 @@ use 5.006;
 use strict;
 use warnings;
 
-our $VERSION = '0.001000'; # VERSION
+our $VERSION = '0.001001'; # VERSION
 
 use parent 'Exporter';
 use Scalar::Util 'blessed';
-use Carp;
 use Test::Builder;
 use Test::Deep::NoTest qw(
 	cmp_details
 	methods
 	deep_diag
 );
-use Test::More;
 
 our @EXPORT ## no critic ( AutomaticExportation )
 	= ( qw( method_ok ) );
@@ -81,10 +79,11 @@ Test::Method - test sugar for methods
 
 =head1 VERSION
 
-version 0.001000
+version 0.001001
 
 =head1 SYNOPSIS
 
+	use Test::More;
 	use Test::Method;
 
 	my $obj = Class->new; # blessed reference
@@ -95,6 +94,12 @@ version 0.001000
 
 	method_ok( $obj, 'method', ['arg1', 'arg2'], 'expected', 'testname' );
 	# testname Class->method(...) is 'expected'
+
+	use Test::Deep;
+	method_ok( $obj, 'method', [], re('^foo'), );
+	# Test->method() is Test::Deep::Regexp
+
+	done_testing;
 
 =head1 DESCRIPTION
 

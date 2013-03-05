@@ -2,9 +2,10 @@ NAME
     Test::Method - test sugar for methods
 
 VERSION
-    version 0.001000
+    version 0.001001
 
 SYNOPSIS
+            use Test::More;
             use Test::Method;
 
             my $obj = Class->new; # blessed reference
@@ -15,6 +16,12 @@ SYNOPSIS
 
             method_ok( $obj, 'method', ['arg1', 'arg2'], 'expected', 'testname' );
             # testname Class->method(...) is 'expected'
+
+            use Test::Deep;
+            method_ok( $obj, 'method', [], re('^foo'), );
+            # Test->method() is Test::Deep::Regexp
+
+            done_testing;
 
 DESCRIPTION
     The reason for creating Test::Method is to provide an easy way of

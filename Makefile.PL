@@ -26,17 +26,15 @@ my %WriteMakefileArgs = (
   "LICENSE" => "artistic_2",
   "NAME" => "Test::Method",
   "PREREQ_PM" => {
-    "Carp" => 0,
     "Exporter" => 0,
     "Scalar::Util" => 0,
     "Test::Builder" => 0,
     "Test::Deep::NoTest" => 0,
-    "Test::More" => 0,
     "parent" => 0,
     "strict" => 0,
     "warnings" => 0
   },
-  "VERSION" => "0.001000",
+  "VERSION" => "0.001001",
   "test" => {
     "TESTS" => "t/*.t"
   }
