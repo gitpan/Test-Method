@@ -3,7 +3,7 @@ use 5.006;
 use strict;
 use warnings;
 
-our $VERSION = '0.001001'; # VERSION
+our $VERSION = '0.001002'; # VERSION
 
 use parent 'Exporter';
 use Scalar::Util 'blessed';
@@ -79,7 +79,7 @@ Test::Method - test sugar for methods
 
 =head1 VERSION
 
-version 0.001001
+version 0.001002
 
 =head1 SYNOPSIS
 
